@@ -7,8 +7,8 @@
 ## 安装说明
 1.首先，克隆该项目的存储库：
 ```
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/wishtodaya/ChartGenie.git
+cd ChartGenie
 ```
 2.然后，安装项目依赖：
 ```
