@@ -12,9 +12,10 @@
         <form id="chart-form">
             <div class="form-group">
                 <label for="user-input">描述需要生成的图表:</label>
-                <input type="text" id="user-input" name="user-input" required>
+                <textarea type="text" id="user-input" name="user-input" rows="8" cols="200"  required></textarea>
+                <div id="loading-animation" class="loading-animation"></div>
             </div>
-            <button type="submit">生成图表</button>
+            <button type="submit" id="submit-button">生成图表</button>
         </form>
         <div id="chart-container"></div>
     </div>

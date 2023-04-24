@@ -45,12 +45,6 @@ label {
     margin-bottom: 0.5em;
 }
 
-input[type="text"] {
-    font-size: 1em;
-    padding: 4px;
-    width: 100%;
-}
-
 button {
     font-size: 1.1em;
     background-color: #333;
@@ -65,7 +59,41 @@ button:hover {
 }
 
 #chart-container {
+    margin-top: 100px;
     width: 100%;
     height: 500px;
-    margin: 2em auto;
+    /* margin: 2em auto; */
+}
+/* Add this to your main.css file */
+.loading-animation {
+    display: none;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #007bff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%; /* Center the animation vertically */
+    left: 50%; /* Center the animation horizontally */
+}
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Add or modify the following CSS rules as needed */
+  textarea[type="text"] {
+    height: 200px;
+    font-size: 18px;
+    padding: 10px;
+    width: 800px;
+    resize: none; /* Disable resizing */
+    text-align: center; /* Center text */
+    margin: 0 10px; /* Add margin to the edges */
+}
+.form-group {
+    position: relative;
 }
