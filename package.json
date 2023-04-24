@@ -1,0 +1,18 @@
+{
+  "name": "chartgenie",
+  "version": "1.0.0",
+  "description": "A web app that generates ECharts configuration from natural language input.",
+  "main": "server/app.js",
+  "scripts": {
+    "dev": "node server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^3.2.1"
+  }
+}
