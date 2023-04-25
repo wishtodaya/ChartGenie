@@ -15,7 +15,20 @@ document.getElementById("chart-form").addEventListener("submit", async (event) =
   submitButton.disabled = true;
   loadingAnimation.style.display = "block";
 
-  const prompt = userInput.value + ",只回复生成兼容5.2.1版本ECharts的 options json";
+  const prompt =`${userInput.value},请根据需求提供兼容5.2.1版本的ECharts options 符合格式的JSON字符串,回复json格式如下:{
+    title: {
+      left: 'center'
+    },
+    tooltip: {
+    },
+    legend: {
+      orient: 'vertical',
+      left: 'left'
+    },
+    series: [],
+    ...
+  }`;
+  console.log(prompt);
   const response = await fetch("/generate-chart", {
     method: "POST",
     headers: {
@@ -24,9 +37,8 @@ document.getElementById("chart-form").addEventListener("submit", async (event) =
     },
     body: JSON.stringify({ prompt }),
   });
-
   const data = await response.json();
-
+  console.log(data);
   userInput.disabled = false;
   submitButton.disabled = false;
   loadingAnimation.style.display = "none";
